@@ -46,7 +46,7 @@ export default {
     },
     methods:{
         submitData(){   
-            axios.post("https://wild-bush-3209.fly.dev/user",{
+            axios.post("http://localhost:3000/user",{
                 firstName:this.fastName,
                 lastName:this.lastName,
                 phoneNumber:this.phoneNumber,

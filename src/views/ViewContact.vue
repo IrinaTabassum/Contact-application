@@ -75,7 +75,7 @@ import CustomInput from '../components/CustomInput.vue';
     },
 
     mounted(){
-      axios.get("https://wild-bush-3209.fly.dev/user").then((response) => {
+      axios.get("http://localhost:3000/user").then((response) => {
           this.contuctData=response.data;
           this.mobilDLen = this.contuctData.length - 1;
       })
