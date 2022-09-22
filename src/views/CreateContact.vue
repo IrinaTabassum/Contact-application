@@ -52,9 +52,9 @@ export default {
                 phoneNumber:this.phoneNumber,
                 email:this.email
             }).then(()=>{
-             
+               this.$router.push({ name: 'contact-list'});
             });
-            this.$router.push({ name: 'contact-list'});
+            
         } 
     },
   }
