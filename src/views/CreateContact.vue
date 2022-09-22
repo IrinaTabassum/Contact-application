@@ -46,15 +46,14 @@ export default {
     },
     methods:{
         submitData(){   
-            axios.post("http://localhost:3000/user",{
+            axios.post("https://wild-bush-3209.fly.dev/user",{
                 firstName:this.fastName,
                 lastName:this.lastName,
                 phoneNumber:this.phoneNumber,
                 email:this.email
-            },{headers:{
-              "Access-Control-Allow-Methods": "GET,POST,PUT,OPTIONS",
-              "Access-Control-Allow-Origin": "*"
-            }});
+            }).then(()=>{
+             
+            });
             this.$router.push({ name: 'contact-list'});
         } 
     },

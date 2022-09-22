@@ -45,7 +45,7 @@ export default {
     },
     methods:{
         submitEditedData(){   
-            axios.put("http://localhost:3000/user/"+this.$route.params.id ,{
+            axios.put("https://wild-bush-3209.fly.dev/user/"+this.$route.params.id ,{
                 firstName:this.firstName,
                 lastName:this.lastName,
                 phoneNumber:this.phoneNumber,
@@ -56,7 +56,7 @@ export default {
         }    
     },
     mounted(){
-         axios.get("http://localhost:3000/user/"+this.$route.params.id).then((response) => {
+         axios.get("https://wild-bush-3209.fly.dev/user/"+this.$route.params.id).then((response) => {
                this.firstName=response.data.firstName
                this.lastName=response.data.lastName
                this.phoneNumber=response.data.phoneNumber

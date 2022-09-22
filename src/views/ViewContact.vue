@@ -62,23 +62,24 @@ import CustomInput from '../components/CustomInput.vue';
               this.contuctData = newArray;
               
             } else {
-                axios.get("http://localhost:3000/user").then((response) => {
+                axios.get("https://wild-bush-3209.fly.dev/user").then((response) => {
                     this.contuctData=response.data;   
                 })
             }
         },
         deleteContuct(id){
-            axios.delete("http://localhost:3000/user/" + id).then(() => {
+            axios.delete("https://wild-bush-3209.fly.dev/user/" + id).then(() => {
                 this.contuctData = this.contuctData.filter(row=>row.id != id);
              })
         },
     },
 
     mounted(){
-      axios.get("http://localhost:3000/user").then((response) => {
+      axios.get("https://wild-bush-3209.fly.dev/user", ).then((response) => {
+          // console.log(response);
           this.contuctData=response.data;
           this.mobilDLen = this.contuctData.length - 1;
-      })
-       },
+      });
+    },
   }
 </script>
